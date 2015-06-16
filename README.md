@@ -27,19 +27,17 @@ The logic is simple, but often needs to be applied to many objects within an app
  Your App (CachedDataItemManager.Default.Create(...))
 ------------------------------------------------------
    |
--------------------------------------------------------------
- Cached-Object-Manager (CachedDataItemManager* : CachedCrud) 
--------------------------------------------------------------
+------------------------------------------------------------
+ Cached-Object-Manager (CachedDataItemManager : CachedCrud) 
+------------------------------------------------------------
    |                                              |
--------------------------------------------    -----------------------
- Object-Manager (DataItemManager* : ICrud)      SlidingCache : ICache
--------------------------------------------    -----------------------
+------------------------------------------     -----------------------
+ Object-Manager (DataItemManager : ICrud)       SlidingCache : ICache
+------------------------------------------     -----------------------
    |                                              |
 -------------------------------                ----------------------
  Data Store (SQL Server, etc.)                  Cache Implementation
 -------------------------------                ----------------------
-
-* Implementation required
 </pre>
 
 ## Notes
