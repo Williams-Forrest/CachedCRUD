@@ -17,7 +17,7 @@ namespace CachedCrudLib {
         }
 
         public T Read(K key) {
-            string cacheKey = GetCacheKey(key);
+            var cacheKey = GetCacheKey(key);
             var obj = _cache.Get(cacheKey) as T;
             if (obj == null) {
                 obj = _service.Read(key);
@@ -30,19 +30,19 @@ namespace CachedCrudLib {
         }
 
         public void Update(K key, T obj) {
-            string cacheKey = GetCacheKey(key);
+            var cacheKey = GetCacheKey(key);
             _cache.Remove(cacheKey);
             _service.Update(key, obj);
         }
 
         public void Delete(K key) {
-            string cacheKey = GetCacheKey(key);
+            var cacheKey = GetCacheKey(key);
             _cache.Remove(cacheKey);
             _service.Delete(key);
         }
 
         public void ClearCache(K key) {
-            string cacheKey = GetCacheKey(key);
+            var cacheKey = GetCacheKey(key);
             _cache.Remove(cacheKey);
         }
 
