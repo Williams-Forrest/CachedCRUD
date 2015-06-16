@@ -22,7 +22,7 @@ The logic is simple, but often needs to be applied to many objects within an app
 5. In your app, use the "cached-object-manager" class to perform all operations between the app and data store for the object.  (See Program.cs in the sample app.)
 
 ## Architecture
-...
+<pre>
 ------------------------------------------------------
  Your App (CachedDataItemManager.Default.Create(...))
 ------------------------------------------------------
@@ -40,7 +40,7 @@ The logic is simple, but often needs to be applied to many objects within an app
 -------------------------------                ----------------------
 
 * Implementation required
-...
+</pre>
 
 ## Notes
 
